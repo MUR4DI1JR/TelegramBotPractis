@@ -64,11 +64,11 @@ def answer(message):
         while True:
             if message.text == 'OK':
                 schedule.run_pending()
-                time.sleep(1)
+                time.sleep(100000)
             else:
                 bot.send_message(message.chat.id, "Good bye")
                 schedule.clear()
-                time.sleep(1)
+                time.sleep(100000)
                 break
 
 bot.polling()
